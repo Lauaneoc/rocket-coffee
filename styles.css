@@ -1,0 +1,110 @@
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+}
+h1, img, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--backgrond);
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.lista {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.lista li a{
+  font-family: 'Manrope', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-weight: 400;  
+  cursor: pointer;
+  transition: .6s;
+}
+
+.lista li a:hover {
+  color: var(--button);
+}
+
+.button {
+  padding: 11px 38px;
+  background: none;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid var(--button);
+  font-size: 11px;
+  font-family: 'Manrope', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.titulo {
+  font-family: 'Manrope', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.blurBottom {
+  position: absolute;
+  width: 321px;
+  height: 200px;
+  left: -29px;
+  top: 495px;
+  flex: 0;
+  background: #996DFF;
+  filter: blur(200px);
+}
+
+.blurTop {
+  position: absolute;
+  width: 300px;
+  height: 321px;
+  left: 900px;
+  top: -63px;
+  flex: 0;
+  background: #996DFF;
+  filter: blur(200px);
+}
+
+.tituloShadow {
+  font-family: 'Manrope', sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+
