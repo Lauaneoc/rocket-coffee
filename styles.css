@@ -6,6 +6,7 @@
   --border-menu-mobile: #A8A8B3;
   --text-color-menu-mobile: #E1E1E6;
 }
+
 h1, img, h2 {
   margin: 0;
   padding: 0;
@@ -34,7 +35,7 @@ body {
   font-family: 'Manrope', sans-serif;
   text-decoration: none;
   list-style-type: none;
-  color: white;
+  color: var(--text-color);
   font-weight: 400;  
   cursor: pointer;
   transition: .6s;
@@ -47,7 +48,7 @@ body {
 .button {
   padding: 11px 38px;
   background: none;
-  color: white;
+  color: var(--text-color);
   border-radius: 6px;
   border: 1px solid var(--button);
   font-size: 11px;
@@ -71,10 +72,20 @@ main {
 
 .titulo {
   font-family: 'Manrope', sans-serif;
-  color: white;
+  color: var(--text-color);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 80px;
+  animation: titulo 0.9s forwards;
+}
+
+.tituloShadow {
+  font-family: 'Manrope', sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  animation: tituloShadow 0.9s forwards;
 }
 
 .blurBottom {
@@ -99,12 +110,27 @@ main {
   filter: blur(200px);
 }
 
-.tituloShadow {
-  font-family: 'Manrope', sans-serif;
-  font-size: 80px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+@keyframes titulo {
+  from {
+    opacity: 0.4;
+    transform: translate3d(30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
+
+@keyframes tituloShadow {
+  from {
+    opacity: 0.4;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 
 
